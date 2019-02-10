@@ -37,7 +37,8 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
-import com.consol.citrus.dsl.design.AbstractTestBehavior;
+import com.consol.citrus.dsl.runner.AbstractTestBehavior;
+import com.consol.citrus.dsl.testng.TestNGCitrusTestRunner;
 import com.consol.citrus.context.TestContext;
 import com.consol.citrus.actions.AbstractTestAction;
 import static org.hamcrest.MatcherAssert.assertThat; 
@@ -51,12 +52,13 @@ import java.io.BufferedReader;
 
 
 
+
 /**
  * @author FBo
  */
 
 @Test
-public class CitrusLearning extends TestNGCitrusTestDesigner {
+public class CitrusLearningL2 extends TestNGCitrusTestRunner {
 
 
 
@@ -83,6 +85,8 @@ public class CitrusLearning extends TestNGCitrusTestDesigner {
           String s = "This is a string in which nothing is replaced, OK fine !";
           echo("[func_asis] OK ->in func_asis now ");
           echo("[func_asis] myvar="+ myvar + " - OK ->variable from Test is correctly transmitted to func_asis");
+ 
+ 
           return s;
         }
 
